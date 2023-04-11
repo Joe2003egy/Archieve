@@ -1,0 +1,37 @@
+
+void UI::TerminatedProcessesInformation(ofstream& file)
+{
+	int n = 5;
+	file << "TT   PID   AT  CT  IO_D    WT  RT  TRT" << endl;
+	for (int i = 0; i < n ; i++) //* TODO: set number of terminated processs
+	{
+		file << "TT" << "  " << "PID" << "  " << "AT" << "  " << "CT" << "  " << "IO_D" << "     " << "WT" << "  " << "RT" << "  " << "TRT" << endl;
+	}
+
+
+}
+
+void UI::ProcessesStatistics(ofstream& file)
+{
+	file << "Processes: " << "*" << endl;
+	file << "Avg WT: " << "*" << ",    " << "Avg RT: " << "" << ",    " << "Avg TRT: " << "*" << endl;
+	file << "Migration %: " << "     " << "RTF= " << "*" << "%,    " << "MaxW= " << "*" << "%" << endl;
+	file << "Work Steal%: " << "*" << "%" << endl;
+	file << "Forked Process: " << "*" << "%" << endl;
+	file << "Killed Process: " << "*" << "%" << endl;
+}
+
+void UI::ProcessorsStatistics(ofstream& file)
+{
+	file << "Processors: " << "*" << " [" << "*" << " FCFS, " << "*" << " SJF, " << "*" << " RR]" << endl;
+	file << "Processors Load" << endl;
+	int n = 5;
+	for (int i = 0; i < n - 1; i++) //* TODO: set number of processors
+		cout << "p" << "*" << "=" << "*" << "%,   ";//* TODO: set number of each processor and its percentage
+	file << "p" << "*" << "=" << "*" << "%" << endl << endl;//* TODO: set number of each processor and its percentage
+	file << "Processors Utiliz" << endl;
+	for (int i = 0; i < n - 1; i++) //* TODO: set number of processors
+		cout << "p" << "*" << "=" << "*" << "%,   ";//* TODO: set number of each processor and its percentage
+	file << "p" << "*" << "=" << "*" << "%" << endl;//* TODO: set number of each processor and its percentage
+	file << "Avg Utilization = " << "*" << "%" << endl;
+}
